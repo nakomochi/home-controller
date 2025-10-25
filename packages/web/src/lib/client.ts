@@ -1,0 +1,1 @@
+import { AppType } from "service";
