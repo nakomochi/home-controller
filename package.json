@@ -1,16 +1,23 @@
 {
-  "name": "home-controller",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@biomejs/biome": "2.3.0",
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "home-controller",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "2.3.0",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"dev:web": "cd packages/web && bun run dev",
+		"dev:service": "cd packages/service && bun run dev",
+		"fix": "bunx --bun biome format --write",
+		"lint": "bunx --bun biome lint --write",
+		"check": "bunx --bun biome check"
+	}
 }

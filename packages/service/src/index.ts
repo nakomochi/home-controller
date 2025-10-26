@@ -1,12 +1,14 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+const route = app
+	.use("*", async (c) => {})
+	.get("/", (c) => {
+		return c.text("Hello Hono!");
+	});
 
-type AppType = typeof app
+type AppType = typeof route;
 
-export default app
-export type { AppType }
+export default route;
+export type { AppType };
