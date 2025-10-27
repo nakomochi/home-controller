@@ -5,6 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "bme280>=0.7",
     "fastapi[standard]>=0.120.0",
+    "pigpio>=1.78",
+    "python-tsl2591>=0.2.0",
     "ruff>=0.14.2",
 ]
