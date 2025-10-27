@@ -1,0 +1,8 @@
+{
+  "name": "hardware",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "uv run fastapi dev main.py"
+  }
+}

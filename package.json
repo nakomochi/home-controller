@@ -16,7 +16,8 @@
 	"scripts": {
 		"dev:web": "cd packages/web && bun run dev",
 		"dev:service": "cd packages/service && bun run dev",
-		"fix": "bunx --bun biome format --write",
+		"dev:hardware": "cd packages/hardware && bun run dev",
+		"format": "bunx --bun biome format --write",
 		"lint": "bunx --bun biome lint --write",
 		"check": "bunx --bun biome check"
 	}
