@@ -3,6 +3,6 @@ export default {
 	out: "./drizzle",
 	dialect: "sqlite",
 	dbCredentials: {
-		url: "./data/home.db",
+		url: "./local.db",
 	},
 };
