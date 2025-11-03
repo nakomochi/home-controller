@@ -175,6 +175,7 @@ dependencies = [
     { name = "bme280" },
     { name = "fastapi", extra = ["standard"] },
     { name = "pigpio" },
+    { name = "piir" },
     { name = "python-tsl2591" },
     { name = "rpi-bme280" },
     { name = "ruff" },
@@ -185,6 +186,7 @@ requires-dist = [
     { name = "bme280", specifier = ">=0.7" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.120.0" },
     { name = "pigpio", specifier = ">=1.78" },
+    { name = "piir", specifier = ">=0.2.5" },
     { name = "python-tsl2591", specifier = ">=0.2.0" },
     { name = "rpi-bme280", specifier = ">=0.2.4" },
     { name = "ruff", specifier = ">=0.14.2" },
@@ -359,6 +361,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/a9/4a/3ebdfd90906553fb5420e80a475eb52f0809f2a29b547ba3b260db0cbc8f/pigpio-1.78.tar.gz", hash = "sha256:91efa50e4990649da97408a384782d6ccf58342fc59cdfe21ed7a42911569975", size = 40738, upload-time = "2020-09-29T23:55:12.61Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/82/a0/991ac7f96f83936c15f4b26b51d1fdba63e7bc9866411bfda022b649c2a7/pigpio-1.78-py2.py3-none-any.whl", hash = "sha256:81e46f640c4e6342881fa9bbe290dbcd4fc179619dc6591e57a9d4a084dc49fa", size = 39622, upload-time = "2020-09-29T23:55:11.013Z" },
+]
+
+[[package]]
+name = "piir"
+version = "0.2.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pigpio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/cd/52db0dba41e857210f4adc3c510f86748e5d6a0325ed0bd507478a25ba16/PiIR-0.2.5.tar.gz", hash = "sha256:b9c2f5b754b6060a4461edbc6e89cf79d1fcf1c8bf127221ed94466c57358cab", size = 12884, upload-time = "2021-04-10T02:13:36.929Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/65/f7/1f28e80816630e2f1562a5d61272b87c1a300130ba82e0a9b79006a89f4a/PiIR-0.2.5-py3-none-any.whl", hash = "sha256:e7291a4df887f211083b0ff4b4bad5c8ac5cf72ce3f0171973aa651e4b44b4b5", size = 15107, upload-time = "2021-04-10T02:13:35.458Z" },
 ]
 
 [[package]]
