@@ -9,5 +9,6 @@ dependencies = [
     "fastapi[standard]>=0.120.0",
     "pigpio>=1.78",
     "python-tsl2591>=0.2.0",
+    "rpi-bme280>=0.2.4",
     "ruff>=0.14.2",
 ]

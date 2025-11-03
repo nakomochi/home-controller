@@ -176,6 +176,7 @@ dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "pigpio" },
     { name = "python-tsl2591" },
+    { name = "rpi-bme280" },
     { name = "ruff" },
 ]
 
@@ -185,6 +186,7 @@ requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.120.0" },
     { name = "pigpio", specifier = ">=1.78" },
     { name = "python-tsl2591", specifier = ">=0.2.0" },
+    { name = "rpi-bme280", specifier = ">=0.2.4" },
     { name = "ruff", specifier = ">=0.14.2" },
 ]
 
@@ -486,6 +488,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pytz"
+version = "2025.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3", size = 320884, upload-time = "2025-03-25T02:25:00.538Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00", size = 509225, upload-time = "2025-03-25T02:24:58.468Z" },
+]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.3"
 source = { registry = "https://pypi.org/simple" }
@@ -609,6 +620,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/22/54/5b9e60ad6ea7ef654d2607936be312ce78615e011b3461d4b1d161f031c0/rignore-0.7.1-cp314-cp314-win32.whl", hash = "sha256:f49ecef68b5cb99d1212ebe332cbb2851fb2c93672d3b1d372b0fbf475eeb172", size = 635618, upload-time = "2025-10-15T20:59:29.95Z" },
     { url = "https://files.pythonhosted.org/packages/62/50/67137617cbe3e53cbf34d21dad49e153f731797e07261f3b00572a49e69d/rignore-0.7.1-cp314-cp314-win_amd64.whl", hash = "sha256:3f55593d3bbcae3c108d546e8776e51ecb61d1d79bbb02016acf29d136813835", size = 717951, upload-time = "2025-10-15T20:59:20.519Z" },
     { url = "https://files.pythonhosted.org/packages/77/19/dd556e97354ad541b4f7f113e28503865777d6edd940c147f052dc7b8f04/rignore-0.7.1-cp314-cp314-win_arm64.whl", hash = "sha256:60745773b5278fa5f20232fbfb148d74ad9fb27ae8a5097d3cbd5d7cc922d7f7", size = 647796, upload-time = "2025-10-15T20:59:13.724Z" },
+]
+
+[[package]]
+name = "rpi-bme280"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytz" },
+    { name = "smbus2" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/14/27/636b1924ab8bbdf138868051e767b857bf60ad2d05e17f7b26d2fbf4cbfd/RPi.bme280-0.2.4.tar.gz", hash = "sha256:5b0e9309a2d518f9e120f1343ed4fc81ff69b196db748eabf96dd575a9f48c5d", size = 1733283, upload-time = "2021-12-22T16:47:43.712Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/89/42857818741cd2be752ac2cc9f602571c6150c12362a4a4c466fda0ec5eb/RPi.bme280-0.2.4-py2.py3-none-any.whl", hash = "sha256:9dee82a9c4eef23606dc04e4f582821ebafb21fb943dbf588cf38fc0b636fc39", size = 10442, upload-time = "2021-12-22T16:47:45.89Z" },
 ]
 
 [[package]]
