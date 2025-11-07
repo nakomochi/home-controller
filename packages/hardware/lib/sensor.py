@@ -9,8 +9,8 @@ class BME280Data(TypedDict):
     humidity: float
 
 class TSL2591Data(TypedDict):
-    full: float
-    ir: float
+    fullSpectrum: float
+    infrared: float
     lux: float
 
 def read_bme280() -> BME280Data:
@@ -30,8 +30,8 @@ def read_tsl2591() -> TSL2591Data:
     full, ir = sensor.get_full_luminosity()
     lux = sensor.calculate_lux(full, ir)
     return {
-        "full": full,
-        "ir": ir,
+        "fullSpectrum": full,
+        "infrared": ir,
         "lux": lux
     }
 
