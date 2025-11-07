@@ -37,19 +37,19 @@ def read_tsl2591() -> TSL2591Data:
 
 if __name__ == "__main__":
     try: 
-        temp, pre, hum = read_bme280()
+        bme280_data = read_bme280()
         print("BME280")
-        print(f"Temperature: {temp:.2f} °C")
-        print(f"Pressure:    {pre:.2f} hPa")
-        print(f"Humidity:    {hum:.2f} %")
+        print(f"Temperature: {bme280_data['temperature']:.2f} °C")
+        print(f"Pressure:    {bme280_data['pressure']:.2f} hPa")
+        print(f"Humidity:    {bme280_data['humidity']:.2f} %")
     except Exception as e:
         print("BME280 Error:", e)
 
     try:
-        full, ir, lux = read_tsl2591()
+        tsl2591_data = read_tsl2591()
         print("TSL2591")
-        print(f"Full Spectrum: {full}")
-        print(f"Infrared:      {ir}")
-        print(f"Lux:           {lux:.2f}")
+        print(f"Full Spectrum: {tsl2591_data["fullSpectrum"]}")
+        print(f"Infrared:      {tsl2591_data["infrared"]}")
+        print(f"Lux:           {tsl2591_data["lux"]:.2f}")
     except Exception as e:
         print("TSL2591 Error:", e)

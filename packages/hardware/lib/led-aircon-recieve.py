@@ -6,8 +6,8 @@ from piir.prettify import prettify
 from piir.remote import Remote
 
 RECEIVER_GPIO = 18
-JSON_FILE = "store/light.json"
-KEYS_TO_LEARN = ["all", "scene", "night", "off", "up", "down"]
+JSON_FILE = "store/aircon1.json"
+KEYS_TO_LEARN = ["1", "2", "3"]
 
 keys = {}
 
@@ -17,6 +17,10 @@ for key_name in KEYS_TO_LEARN:
     print(f"Press the button '{key_name}'")
     raw_data = receive(RECEIVER_GPIO)
     decoded_data = decode(raw_data)
+    if decoded_data is None:
+        print(f"⚠️ '{key_name}' の信号を decode できませんでした（raw データは保存されます）")
+    else:
+        print(f"✅ '{key_name}' decoded successfully")
     keys[key_name] = decoded_data
     print(f"{key_name} signal has been recorded")
 
