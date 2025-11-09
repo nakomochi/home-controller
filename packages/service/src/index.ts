@@ -2,8 +2,8 @@ import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
 import { cors } from "hono/cors";
-import { drizzle } from "drizzle-orm/bun-sqlite";
-import Database from "bun:sqlite";
+import { db } from "./db/index";
+import type { drizzle } from "drizzle-orm/bun-sqlite";
 import { eq } from "drizzle-orm";
 import { RASPBERRY_PI_URL, SECRET } from "./env.js";
 import * as schema from "./db/schema";
@@ -24,8 +24,6 @@ export type Details = {
 	infrared: number;
 };
 
-const sqlite = new Database("local.db");
-const db = drizzle(sqlite, { schema });
 
 const app = new Hono<{ Variables: Variables }>();
 
