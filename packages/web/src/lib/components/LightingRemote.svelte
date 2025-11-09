@@ -3,7 +3,7 @@
 	import { client } from "$lib/client";
 	import { toast } from "svelte-sonner";
 
-	export let luminosity: number;
+	export let lux: number | null = null;
 
 	async function setLight(command: "on" | "scene" | "night" | "off") {
 		const res = await client.api.light.$post({ json: { command } });
@@ -29,8 +29,8 @@
 <div class="w-full max-w-xs p-4 space-y-4">
 	<div class="card bg-base-200">
 		<div class="card-body items-center text-center">
-			<h2 class="card-title">Luminosity</h2>
-			<p class="text-2xl font-bold">{luminosity}lx</p>
+			<h2 class="card-title">Illuminance</h2>
+			<p class="text-2xl font-bold">{lux}lx</p>
 		</div>
 	</div>
 

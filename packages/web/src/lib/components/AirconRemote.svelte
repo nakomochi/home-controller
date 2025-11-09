@@ -3,8 +3,8 @@
 	import { client } from "$lib/client";
 	import { toast } from "svelte-sonner";
 
-	export let temperature: number;
-	export let humidity: number;
+	export let temperature: number | null = null;
+	export let humidity: number | null = null;
 
 	let targetTemperature = temperature;
 
@@ -27,6 +27,7 @@
 	}
 
 	function adjustTemperature(direction: "up" | "down") {
+		if (!targetTemperature) return;
 		if (direction === "up") {
 			targetTemperature++;
 		} else {

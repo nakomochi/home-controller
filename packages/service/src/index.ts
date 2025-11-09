@@ -15,8 +15,11 @@ type Variables = {
 };
 export type Details = {
 	temperature: number;
+	pressure: number;
 	humidity: number;
-	luminosity: number;
+	lux: number;
+	fullSpectrum: number;
+	infrared: number;
 };
 
 const sqlite = new Database("local.db");
