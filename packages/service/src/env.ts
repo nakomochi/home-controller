@@ -8,4 +8,4 @@ function getEnv(key: string): string {
 
 export const RASPBERRY_PI_URL = getEnv("RASPBERRY_PI_URL");
 export const SECRET = Bun.password.hash(getEnv("SECRET"));
-export const SITE_URL = getEnv("SITE_URL");
+export const API_URL = getEnv("API_URL");

@@ -8,6 +8,8 @@ import { eq } from "drizzle-orm";
 import { RASPBERRY_PI_URL, SECRET } from "./env.js";
 import * as schema from "./db/schema";
 
+export { API_URL } from "./env";
+
 type Device = typeof schema.devices.$inferSelect;
 type Variables = {
 	db: ReturnType<typeof drizzle>;
