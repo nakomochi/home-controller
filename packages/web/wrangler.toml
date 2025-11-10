@@ -1,0 +1,7 @@
+name = "home-controller"
+main = ".svelte-kit/cloudflare/_worker.js"
+compatibility_date = "2025-11-10"
+
+[assets]
+bindings = "ASSETS"
+directory = ".svelte-kit/cloudflare"

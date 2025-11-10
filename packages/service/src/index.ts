@@ -3,7 +3,7 @@ import { getCookie, setCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
 import { cors } from "hono/cors";
 import { db } from "./db/index";
-import type { drizzle } from "drizzle-orm/bun-sqlite";
+import type { drizzle } from "drizzle-orm/libsql";
 import { eq } from "drizzle-orm";
 import { RASPBERRY_PI_URL, SECRET } from "./env.js";
 import * as schema from "./db/schema";
